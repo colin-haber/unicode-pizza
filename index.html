@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<title>Unicode Pizza!</title>
+		<meta name="description" content="Mangle your text with the power of Unicode!" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="apple-touch-icon" href="media/icon/icon-512.png" type="image/png" />
+		<link rel="icon" href="media/icon/icon-16.png" type="image/png" sizes="16x16" />
+		<link rel="icon" href="media/icon/icon-32.png" type="image/png" sizes="32x32" />
+		<link rel="icon" href="media/icon/icon-36.png" type="image/png" sizes="36x36" />
+		<link rel="icon" href="media/icon/icon-48.png" type="image/png" sizes="48x48" />
+		<link rel="icon" href="media/icon/icon-64.png" type="image/png" sizes="64x64" />
+		<link rel="icon" href="media/icon/icon-72.png" type="image/png" sizes="72x72" />
+		<link rel="icon" href="media/icon/icon-96.png" type="image/png" sizes="96x96" />
+		<link rel="icon" href="media/icon/icon-128.png" type="image/png" sizes="128x128" />
+		<link rel="icon" href="media/icon/icon-144.png" type="image/png" sizes="144x144" />
+		<link rel="icon" href="media/icon/icon.svg" type="image/svg+xml" sizes="any" />
+		<link rel="manifest" href="colinhaber-unicodepizza.webmanifest" type="application/manifest+json" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif:400,700">
+		<link rel="stylesheet" href="styles/pizza.css" type="text/css" media="screen" />
+		<script src="scripts/pizza.js" type="application/javascript" defer></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105305084-4"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "UA-105305084-4");
+		</script>
+	</head>
+	<body class="site">
+		<header class="site-header">
+			<hgroup>
+				<h1>Unicode Pizza</h1>
+			</hgroup>
+		</header>
+		<main class="site-main">
+			<article class="page">
+				<form id="pizza" class="pizza" name="pizza">
+					<p>
+						<label for="pizza-input">Input</label>
+						<textarea id="pizza-input" name="input" placeholder="Enter text here&hellip;"></textarea>
+					</p>
+					<p class="_tray">
+						<button name="topping-uppercase" data-topping="uppercase">Uppercase</button>
+						<button name="topping-lowercase" data-topping="lowercase">Lowercase</button>
+						<button name="topping-doublestruck" data-topping="doublestruck">Blackboard</button>
+						<button name="topping-fraktur" data-topping="fraktur">Fraktur</button>
+						<button name="topping-fullwidth" data-topping="fullwidth">Fullwidth</button>
+						<button name="topping-mono" data-topping="mono">Monospace</button>
+						<button name="topping-sans" data-topping="sans">Sans-serif</button>
+						<button name="topping-script" data-topping="script">Script</button>
+						<button name="topping-bold" data-topping="bold">Bold</button>
+						<button name="topping-italic" data-topping="italic">Italic</button>
+					</p>
+					<p>
+						<label for="pizza-output">Output</label>
+						<textarea id="pizza-output" name="output" placeholder="&hellip;and get modified text."></textarea>
+					</p>
+				</form>
+			</article>
+		</main>
+	</body>
+</html>

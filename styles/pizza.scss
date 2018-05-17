@@ -1,0 +1,139 @@
+﻿button,
+fieldset,
+textarea {
+	padding: unset;
+}
+button,
+fieldset,
+textarea {
+	border: unset;
+}
+body,
+fieldset,
+h1,
+p {
+	margin: unset;
+}
+:focus {
+	outline: unset;
+}
+button,
+h1,
+textarea {
+	font: unset;
+}
+:any-link {
+	text-decoration: unset;
+}
+button,
+textarea,
+:any-link {
+	color: unset;
+}
+$color-primary: #3498DB;
+$color-dark: #324755;
+$color-light: #F9FAFC;
+$color-secondary: #E74C3C;
+button,
+textarea {
+	background: unset;
+}
+textarea {
+	resize: unset;
+}
+:root {
+	font: 1em/1.2rem "Noto Sans", sans-serif;
+	color: $color-dark;
+	background-color: $color-light;
+}
+.site {
+	display: flex;
+	width: 100vw;
+	min-height: 100vh;
+	flex-direction: column;
+	.site-header {
+		padding: 1.2rem 1rem;
+		flex: 0 0 auto;
+	}
+	.site-header {
+		border-bottom: 1px solid rgba($color-dark, 0.2);
+		h1 {
+			font-weight: bold;
+		}
+	}
+	.site-main {
+		display: flex;
+		flex: 1 1 auto;
+		flex-direction: column;
+	}
+}
+.page {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+}
+#pizza {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	p {
+		display: flex;
+		flex: 1 1 auto;
+		flex-direction: column;
+		background: white;
+		label {
+			display: block;
+			flex: 0 0 auto;
+			padding: {
+				top: 1.2rem;
+				right: 1rem;
+				left: 1rem;
+			}
+			font-weight: bold;
+		}
+		textarea {
+			display: block;
+			box-sizing: border-box;
+			flex: 1 1 auto;
+			width: 100%;
+			padding: 1.2rem 1rem;
+		}
+		&._tray {
+			display: flex;
+			flex: 0 0 auto;
+			border-width: 1px;
+			border-color: rgba($color-dark, 0.2);
+			border-top-style: solid;
+			border-bottom-style: solid;
+			flex-direction: row;
+			overflow-x: auto;
+			background-color: $color-light;
+			@media (min-width: 768px) {
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+			button {
+				flex: 1 1 40px;
+				padding: 0.6rem 1rem;
+				white-space: nowrap;
+				cursor: pointer;
+				&:hover {
+					color: white;
+					background-color: rgba($color-primary, 0.6);
+				}
+				&._enabled {
+					color: white;
+					background-color: $color-primary;
+				}
+				&[disabled] {
+					color: rgba($color-dark, 0.4);
+					cursor: not-allowed;
+					&:hover {
+						color: rgba($color-dark, 0.4);
+						background-color: unset;
+					}
+				}
+			}
+		}
+	}
+}

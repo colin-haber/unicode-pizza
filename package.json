@@ -1,0 +1,13 @@
+{
+	"version": "0.1.0",
+	"name": "colinhaber-unicodepizza",
+	"private": true,
+	"devDependencies": {
+		"del": "3.0.0",
+		"gulp": "3.9.1",
+		"gulp-sass": "4.0.1",
+		"gulp-sourcemaps": "2.6.4",
+		"gulp-typescript": "4.0.2",
+		"typescript": "2.8.3"
+	}
+}
