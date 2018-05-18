@@ -98,6 +98,10 @@ document.querySelectorAll("button[data-topping]").forEach((toggle) => {
         toggle.addEventListener("click", function (event) {
             const topping = toppings[this.dataset["topping"]];
             topping.isEnabled = this.classList.toggle("_enabled");
+            gtag("event", "Toggle", {
+                "event_category": "Topping",
+                "event_label": name
+            });
             updateToggleStates();
             updateOutputText();
         });

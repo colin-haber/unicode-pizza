@@ -1,4 +1,5 @@
 ﻿"use strict";
+declare function gtag(tag: string, action: string, parameters: object);
 interface String {
 	applyShiftMaps(...maps: Array<ShiftMapping>): string;
 }
@@ -148,6 +149,10 @@ document.querySelectorAll("button[data-topping]").forEach((toggle: HTMLButtonEle
 		toggle.addEventListener("click", function (event: Event) {
 			const topping = <Topping>toppings[this.dataset["topping"]];
 			topping.isEnabled = this.classList.toggle("_enabled");
+			gtag("event", "Toggle", {
+				"event_category": "Topping",
+				"event_label": name
+			});
 			updateToggleStates();
 			updateOutputText();
 		});
